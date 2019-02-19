@@ -1,4 +1,0 @@
-default:
-  # Outgoing emails configuration (see examples above)
-  email_delivery:
-    delivery_method: :smtp
