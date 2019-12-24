@@ -59,7 +59,7 @@ end
 require 'erb'
 require 'yaml'
 group :production do
-  gem 'pg', '~> 0.20'
+  gem 'pg', '0.20'
 end
 
 group :development do
