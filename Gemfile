@@ -89,5 +89,3 @@ Dir.glob File.expand_path("../plugins/*/{Gemfile,PluginGemfile}", __FILE__) do |
   eval_gemfile file
 end
 
-gem 'activerecord-compatible_legacy_migration'
-gem 'retryable'
