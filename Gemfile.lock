@@ -32,6 +32,8 @@ GEM
       activemodel (= 4.2.11)
       activesupport (= 4.2.11)
       arel (~> 6.0)
+    activerecord-compatible_legacy_migration (0.1.1)
+      activerecord (>= 4.0.0)
     activesupport (4.2.11)
       i18n (~> 0.7)
       minitest (~> 5.1)
@@ -56,10 +58,15 @@ GEM
     css_parser (1.6.0)
       addressable
     docile (1.1.5)
+    dropbox-api (0.4.7)
+      hashie (~> 3.4.0)
+      multi_json (~> 1.10)
+      oauth (~> 0.4.7)
     erubis (2.7.0)
     ffi (1.10.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    hashie (3.4.6)
     htmlentities (4.3.4)
     i18n (0.7.0)
     jquery-rails (3.1.5)
@@ -84,6 +91,7 @@ GEM
     net-ldap (0.12.1)
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
+    oauth (0.4.7)
     pg (0.20.0)
     protected_attributes (1.1.4)
       activemodel (>= 4.0.1, < 5.0)
@@ -128,6 +136,7 @@ GEM
     rdoc (4.3.0)
     redcarpet (3.4.0)
     request_store (1.0.5)
+    retryable (3.0.5)
     rmagick (2.16.0)
     roadie (3.2.2)
       css_parser (~> 1.4)
@@ -178,6 +187,7 @@ PLATFORMS
 
 DEPENDENCIES
   actionpack-xml_parser
+  activerecord-compatible_legacy_migration
   bundler (>= 1.5.0, < 2.0.0)
   capybara (~> 2.13)
   coderay (~> 1.1.1)
@@ -200,6 +210,7 @@ DEPENDENCIES
   rdoc (~> 4.3)
   redcarpet (~> 3.4.0)
   request_store (= 1.0.5)
+  retryable
   rmagick (>= 2.14.0)
   roadie (~> 3.2.1)
   roadie-rails (~> 1.1.1)
