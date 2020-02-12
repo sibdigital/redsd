@@ -1,6 +1,6 @@
 GIT
-  remote: https://github.com/omenking/dropbox-api.git
-  revision: 2b067c31a1733593297ff254a2a6f540ee78cf17
+  remote: https://github.com/alxtmf/dropbox-api.git
+  revision: d06e46255314e7c64321877f7e85a2712ac92634
   specs:
     dropbox-api (0.5.1)
       hashie (~> 3.5.6)

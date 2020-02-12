@@ -8,7 +8,8 @@ class DropboxController < ApplicationController
       flash[:warning] = l(:warning_settings_unsaved)
       redirect_to "/settings/plugin/#{PLUGIN_BASE}"
     elsif !params[:oauth_token]
-      consumer = ::Dropbox::API::OAuth2.consumer(:authorize)
+      #fgg = Dropbox::API::Util.escape '12345'
+      consumer = Dropbox::API::Util.consumer(:authorize)
       request_token = consumer.get_request_token
 
       tmp = settings.value
@@ -23,7 +24,7 @@ class DropboxController < ApplicationController
       redirect_to request_token.authorize_url(:oauth_callback => url_for(:action => 'authorize'))
     else
       # Create new request_token
-      consumer = ::Dropbox::API::OAuth2.consumer(:authorize)
+      consumer = Dropbox::API::OAuth2_.consumer(:authorize)
       request_token = OAuth::RequestToken.new(consumer, session[:request_token], session[:request_token_secret])
 
       tmp = settings.value
