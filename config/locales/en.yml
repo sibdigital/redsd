@@ -1099,6 +1099,9 @@ en:
   text_journal_changed: "%{label} changed from %{old} to %{new}"
   text_journal_changed_no_detail: "%{label} updated"
   text_journal_set_to: "%{label} set to %{value}"
+  text_journal_checkbox_set_to: "Subtask %{label} set as %{value}"
+  text_journal_checkbox_set_to_[x]: "Done"
+  text_journal_checkbox_set_to_[ ]: "Undone"
   text_journal_deleted: "%{label} deleted (%{old})"
   text_journal_added: "%{label} %{value} added"
   text_tip_issue_begin_day: issue beginning this day
