@@ -1,1 +1,0 @@
-gem "dropbox-api", git: 'https://github.com/alxtmf/dropbox-api.git'
