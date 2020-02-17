@@ -1,0 +1,43 @@
+<p>
+  <label><%= l(:label_basedir) %></label>
+  <%= text_field_tag 'settings[DROPBOX_BASE_DIR]', settings['DROPBOX_BASE_DIR'] %>
+  <br />
+  <em><%= l(:basedir_instructions) %></em>
+</p>
+<p>
+  <label><%= l(:label_use_hierarchy) %></label>
+  <%= check_box_tag 'settings[DROPBOX_USE_HIERARCHY]', nil, settings['DROPBOX_USE_HIERARCHY'] %>
+  <br />
+  <em><%= l(:label_about_hierarchy) %></em>
+</p>
+<hr/>
+
+<p>
+  <strong><%= l(:authorization_settings) %></strong>
+  <br/>
+  <em><%= l(:authorization_settings_instructions) %></em>
+</p>
+<p>
+  <label><%=l(:label_token)%></label>
+  <%= text_field_tag 'settings[DROPBOX_TOKEN]', settings['DROPBOX_TOKEN'] %>
+</p>
+<p>
+  <label><%=l(:label_secret)%></label>
+  <%= text_field_tag 'settings[DROPBOX_SECRET]', settings['DROPBOX_SECRET'] %>
+</p>
+<% if settings['DROPBOX_TOKEN'].blank? || settings['DROPBOX_SECRET'].blank? %>
+	<p>
+		<em><%= l(:enter_tokens_first) %></em>
+	</p>
+<% else %>
+	<p>
+	  <label><%= l(:label_authorization) %></label>
+	  <%= link_to l(:label_authorize_instance), {:controller => 'dropbox', :action => 'authorize'} %>
+	  <br />
+	  <% if !settings['DROPBOX_OAUTH_TOKEN'] %>
+		  <em><%= l(:authorization_instructions) %></em>
+	  <% else %>
+		  <em><%= l(:reauthorization_instructions) %></em>
+	  <% end %>
+	</p>
+<% end %>
