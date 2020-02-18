@@ -24,7 +24,7 @@ class IssueChecklist < ActiveRecord::Base
   end
 
   def recalc_issue_done_ratio
-    return false if (Setting.issue_done_ratio != 'issue_field') || !RedmineIssueChecklist.settings[:issue_done_ratio]
+    return false if (Setting.issue_done_ratio != 'issue_field') || !RedmineIssueChecklist.settings["issue_done_ratio"]
     done_checklist   = issue.checklist.map { |c| c.is_done ? 1 : 0 }
     issue.done_ratio = (done_checklist.count(1) * 10) / done_checklist.count * 10
     issue.save
