@@ -501,7 +501,13 @@ module IssuesHelper
         elsif multiple
           l(:text_journal_added, :label => label, :value => value).html_safe
         else
-          l(:text_journal_set_to, :label => label, :value => value).html_safe
+          if detail.prop_key == 'checklist'
+            value = detail.value[0,3]
+            label = detail.value[4, detail.value.length]
+            l(:text_journal_checkbox_set_to, :label => label, :value => I18n.t("text_journal_checkbox_set_to_"+value)).html_safe
+          else
+            l(:text_journal_set_to, :label => label, :value => value).html_safe
+          end
         end
       when 'attachment', 'relation'
         l(:text_journal_added, :label => label, :value => value).html_safe

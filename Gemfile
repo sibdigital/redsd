@@ -59,7 +59,7 @@ end
 require 'erb'
 require 'yaml'
 group :production do
-  gem 'pg', '~> 0.20'
+  gem 'pg', '0.20'
 end
 
 group :development do
@@ -88,3 +88,4 @@ end
 Dir.glob File.expand_path("../plugins/*/{Gemfile,PluginGemfile}", __FILE__) do |file|
   eval_gemfile file
 end
+

@@ -905,6 +905,9 @@ ru:
   text_journal_changed: "Параметр %{label} изменился с %{old} на %{new}"
   text_journal_deleted: "Значение %{old} параметра %{label} удалено"
   text_journal_set_to: "Параметр %{label} изменился на %{value}"
+  text_journal_checkbox_set_to: "%Подзадача {label} отмечена как %{value}"
+  text_journal_checkbox_set_to_[x]: "Выполнена"
+  text_journal_checkbox_set_to_[ ]: "Невыполнена"
   text_length_between: "Длина между %{min} и %{max} символов."
   text_load_default_configuration: Загрузить конфигурацию по умолчанию
   text_min_max_length_info: 0 означает отсутствие ограничений
